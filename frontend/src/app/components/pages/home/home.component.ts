@@ -5,6 +5,8 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { StarRatingComponent } from '../../partials/star-rating/star-rating.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from '../../partials/search/search.component';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,9 @@ import { StarRatingComponent } from '../../partials/star-rating/star-rating.comp
     CommonModule,
     RouterLink,
     FormsModule,
-    StarRatingComponent
+    StarRatingComponent,
+    HttpClientModule,
+    SearchComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
@@ -26,7 +30,15 @@ export class HomeComponent {
     private foodService: FoodService,
     activatedRoute: ActivatedRoute
   ) {
-    this.foods = foodService.getAll();
+    activatedRoute.params.subscribe((params) => {
+      if (params['searchTerm']) {
+        this.foods = this.foodService.getAllFoodBySearchTerm(
+          params['searchTerm']
+        );
+      } else {
+        this.foods = foodService.getAll();
+      }
+    });
   }
 
   ngOnInit() {}
