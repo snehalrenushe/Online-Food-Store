@@ -25,6 +25,7 @@
       3. Add css
 
 6. Search
+
    1. Add method to Food service
    2. Add search route
    3. Show search result in Home component
@@ -33,6 +34,7 @@
       2. Add ts
       3. Add html
       4. Add css
+
 7. Tags Bar
 
    1. Create Tag model
@@ -70,11 +72,28 @@
       4. Add css
 
 10. Not Found
-   1. Generate Component
-      1. Add ts
-      2. Add html
-      3. Add css
-   2. Add To Pages
-      1. Home Page
-      2. Food Page
-      3. art Page
+11. Generate Component
+    1. Add ts
+    2. Add html
+    3. Add css
+12. Add To Pages
+
+    1. Home Page
+    2. Food Page
+    3. art Page
+
+13. Connect To Backend
+14. Create backend folder
+15. npm init
+16. npm install typescript
+17. Create tsconfig.json
+18. Create .gitignore
+19. Copy data.ts to backend/src
+20. npm install express cors
+21. Create server.ts
+    1. install @types
+    2. Add Apis
+22. npm install nodemon ts-node --save-dev
+23. Add urs.ts to frontend
+24. Add HttpClient module
+25. Update food service

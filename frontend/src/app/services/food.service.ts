@@ -15,9 +15,9 @@ export class FoodService {
     return sample_foods;
   }
 
-  getAllFoodBySearchTerm(searchTerms: string) {
+  getAllFoodBySearchTerm(searchTerm: string) {
     return this.getAll().filter((food) =>
-      food.name.toLocaleLowerCase().includes(searchTerms.toLocaleLowerCase())
+      food.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
     );
   }
 
