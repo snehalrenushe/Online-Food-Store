@@ -6,11 +6,18 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { StarRatingComponent } from '../../partials/star-rating/star-rating.component';
 import { CartService } from '../../../services/cart.service';
+import { NotFoundComponent } from '../../partials/not-found/not-found.component';
 
 @Component({
   selector: 'app-food-page',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, RouterModule, StarRatingComponent],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    RouterModule,
+    StarRatingComponent,
+    NotFoundComponent,
+  ],
   templateUrl: './food-page.component.html',
   styleUrl: './food-page.component.css',
   providers: [FoodService, CartService],
