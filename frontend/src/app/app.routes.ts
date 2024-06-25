@@ -1,7 +1,8 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/pages/home/home.component';
 import { FoodPageComponent } from './components/pages/food-page/food-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
+import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,3 +14,9 @@ export const routes: Routes = [
   { path: 'food/:id', component: FoodPageComponent },
   { path: 'cart-page', component: CartPageComponent },
 ];
+
+// @NgModule({
+//   imports: [RouterModule.forRoot(routes)],
+//   exports: [RouterModule],
+// })
+// export class AppRoutingModule {}

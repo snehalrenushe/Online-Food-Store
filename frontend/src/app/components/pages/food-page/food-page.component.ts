@@ -26,16 +26,21 @@ export class FoodPageComponent {
   food!: Food;
   constructor(
     activatedRoute: ActivatedRoute,
-    public foodService: FoodService,
-    public cartService: CartService,
+    foodService: FoodService,
+    private cartService: CartService,
     private router: Router
   ) {
     activatedRoute.params.subscribe((params) => {
-      if (params['id']) {
-        this.food = foodService.getFoodById(params['id']);
-      }
+      if (params.id)
+        foodService.getFoodById(params.id).subscribe((serverFood) => {
+          console.log(serverFood);
+          
+          this.food = serverFood;
+        });
     });
   }
+
+  ngOnInit(): void {}
 
   addToCart() {
     this.cartService.addToCart(this.food);
