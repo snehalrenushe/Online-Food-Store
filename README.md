@@ -72,28 +72,53 @@
       4. Add css
 
 10. Not Found
-11. Generate Component
-    1. Add ts
-    2. Add html
-    3. Add css
-12. Add To Pages
+   1. Generate Component
+      1. Add ts
+      2. Add html
+      3. Add css
+   2. Add To Pages
+      1. Home Page
+      2. Food Page
+      3. art Page
 
-    1. Home Page
-    2. Food Page
-    3. art Page
+11. Connect To Backend
+   1. Create backend folder
+   2. npm init
+   3. npm install typescript
+   4. Create tsconfig.json
+   5. Create .gitignore
+   6. Copy data.ts to backend/src
+   7. npm install express cors
+   8. Create server.ts
+      1. install @types
+      2. Add Apis
+   9. npm install nodemon ts-node --save-dev
+   10. Add urs.ts to frontend
+   11. Add HttpClient module
+   12. Update food service
 
-13. Connect To Backend
-14. Create backend folder
-15. npm init
-16. npm install typescript
-17. Create tsconfig.json
-18. Create .gitignore
-19. Copy data.ts to backend/src
-20. npm install express cors
-21. Create server.ts
-    1. install @types
-    2. Add Apis
-22. npm install nodemon ts-node --save-dev
-23. Add urs.ts to frontend
-24. Add HttpClient module
-25. Update food service
+12. Login Page
+   1. Generate Component
+      1. Add to routes
+      2. Add ts
+      3. Add html
+         1. Import Reactive Forms Module
+      4. Add Css
+   2. Add Login Api
+      1. Use json
+      2. Add jsonwebtoken
+      3. Test Using Postman
+   3. Generate User Service
+      1. Generate User model
+      2. Add User Subject
+      3. Add Login Method
+         1. Add User Urls
+         2. Generate IUserLogin interface
+         3. Add ngx-toastr
+            1. Import Module
+            2. Import BrowserAnimationsModule
+            3. Add styles in angular.json
+         4. Add to Header
+      4. Add Local Storage methods
+      5. Add Logout Method
+         1. Add to Header
