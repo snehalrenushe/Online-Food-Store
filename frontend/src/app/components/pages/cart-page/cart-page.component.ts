@@ -30,7 +30,6 @@ export class CartPageComponent {
   constructor(private cartService: CartService) {
     this.cartService.getCartObservable().subscribe((cart) => {
       this.cart = cart;
-      console.log(this.cart);
     });
   }
 
